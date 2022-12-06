@@ -18,7 +18,9 @@ public class WorkStation {
     }
 
     public void unAssignWorker(Worker worker, Warehouse warehouse){
+        System.out.println("Worker " + worker.socialSecNumber + " has been unassigned from their workplace " + this.id);
         this.worker = null;
         worker.workstation = null;
+        warehouse.returnWorkStation(this);
     }
 }

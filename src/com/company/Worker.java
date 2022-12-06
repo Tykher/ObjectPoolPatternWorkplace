@@ -13,6 +13,8 @@ public class Worker {
     }
 
     private void requestWorkstation(Warehouse warehouse){
+        System.out.println("Worker " + socialSecNumber + " has requested a workstation");
        warehouse.assignWorkstation().assignWorker(this);
+       System.out.println("Worker " + socialSecNumber + " was assigned workstation " + workstation.id);
     }
 }
