@@ -17,10 +17,10 @@ public class WorkStation {
         worker.workstation = this;
     }
 
-    public void unAssignWorker(Worker worker, Warehouse warehouse){
+    public void unAssignWorker(Warehouse warehouse){
         System.out.println("Worker " + worker.socialSecNumber + " has been unassigned from their workplace " + this.id);
-        this.worker = null;
         worker.workstation = null;
+        this.worker = null;
         warehouse.returnWorkStation(this);
     }
 }

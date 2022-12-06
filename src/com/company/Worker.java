@@ -12,9 +12,13 @@ public class Worker {
         this.socialSecNumber = socialSecNumber;
     }
 
-    private void requestWorkstation(Warehouse warehouse){
+    public void requestWorkstation(Warehouse warehouse){
         System.out.println("Worker " + socialSecNumber + " has requested a workstation");
        warehouse.assignWorkstation().assignWorker(this);
        System.out.println("Worker " + socialSecNumber + " was assigned workstation " + workstation.id);
+    }
+
+    public void unAssign(Warehouse warehouse){
+        this.workstation.unAssignWorker(warehouse);
     }
 }
